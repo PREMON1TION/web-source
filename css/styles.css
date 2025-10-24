@@ -1,0 +1,235 @@
+body {
+  margin: 0; /* убираем отступы по умолчанию */
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #0c0c0c;
+  height: 60px;
+}
+nav {
+  display: flex;
+}
+
+nav img {
+  height: 45px;
+  width: auto;   /* сохраняет пропорции */
+  padding: 3px 0;
+  margin-left: 10px; /* отступ справа от логотипа */
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+
+  font-size: 17px;  
+  margin-right: 70px; 
+}
+nav a:nth-child(2) {
+  padding: 20px 0;
+  margin-right: 30px;
+}
+nav a:nth-child(3) {
+  padding: 20px 0;
+  margin-right: 50px;
+}
+nav a:nth-child(4) {
+  padding: 20px 0;
+  margin-left: -16px;
+}
+
+/* Общие стили для всех секций */
+.banner {
+  width: auto;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 20px;
+}
+
+/* Разные фоны для каждой секции */
+.home {
+  background: url('https://i.ibb.co/LDkmZGFn/882997.jpg') center/cover no-repeat;
+  background-size: cover;
+  background-position: 20% 23%; /* сдвигаем фон немного вниз и вправо */
+  height: 450px;
+    border-bottom: 3px solid;
+  border-image: linear-gradient(to right, #ffd86b, #707070) 1;
+}
+
+
+.home h2 {
+  position: relative;   /* позволяет двигать текст внутри баннера */
+  top: -5px;            /* двигаем вниз */
+  left: 100px;          /* двигаем вправо */
+  color: white;
+  font-size: 34px;
+}
+
+.home .highlight {
+  position: relative;   /* позволяет двигать текст внутри баннера */
+  font-size: 18px;   /* увеличиваем размер */
+  bottom: 29px;            /* двигаем вниз */
+  left: 100px;          /* двигаем вправо */
+  color: #ffffff;    /* пример — золотистый */
+}
+
+.my-button {
+  position: relative;  /* позволяет двигать элемент без смещения других */
+  bottom: 15px;
+  padding: 12px;           /* внутренние отступы: сверху/снизу и слева/справа */
+  width: 140px;
+  font-size: 18px;               /* размер текста */
+  font-weight: bold;
+  color: white;                  /* цвет текста */
+  border: none;                  /* убираем стандартную рамку */
+  border-radius: 10px;           /* закругление углов */
+  cursor: pointer;               /* курсор при наведении */
+  transition: 0.3s;              /* плавный эффект при наведении */
+  margin-left: 100px; /* двигаем вправо */
+  background: linear-gradient(45deg, #ffd86b, #707070); /* диагональный градиент */
+}
+
+.my-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.content-section {
+  display: flex;
+  align-items: center;        /* вертикальное выравнивание */
+  justify-content: space-between; /* расстояние между текстом и изображением */
+  padding: 40px 80px;
+  background: rgb(14, 14, 14); 
+  gap: 20px;                  /* расстояние между колонками */
+}
+
+.content-section img {
+  max-width: 600px;           /* задаем размер картинки */
+  height: auto;
+  border-radius: 10px;        /* закругление углов, если нужно */
+}
+
+.text-left, .text-right {
+  flex: 1;                     /* текст занимает доступное место */
+}
+
+.text-left {
+  padding-left: 70px;  /* сдвигает текст внутрь колонки от левого края */
+  font-size: 18px; 
+  color: white;
+  
+}
+
+.text-right {
+  padding-left: 160px;  /* сдвигает текст внутрь колонки от левого края */
+  font-size: 18px; 
+  color: white;
+  
+}
+
+.image-left, .image-right {
+  flex: 1;                     /* фото занимает доступное место */
+}
+.image-right img {
+  margin-left: 120px; /* сдвигаем вправо */
+}
+
+.image-left img {
+  margin-left: 60px; /* сдвигаем вправо */
+}
+
+/* Для чередования порядка на маленьких экранах */
+@media (max-width: 768px) {
+  .content-section {
+    flex-direction: column;     /* на мобильных экран текст над фото */
+  }
+}
+
+
+/* Разные фоны для каждой секции */
+.services {
+  background: url('https://i.ibb.co/5WxQVN8K/122886.jpg') center/cover no-repeat;
+  background-size: cover;
+  background-position: 20% 23%; /* сдвигаем фон немного вниз и вправо */
+  height: 680px;
+  color: white;
+  border-bottom: 3px solid;
+  border-image: linear-gradient(to right, #6ba6ff, #707070) 1;
+  text-align: center;
+}
+
+.services h2 {
+  position: relative;   /* позволяет двигать текст внутри баннера */
+  top: -50px;            /* двигаем вниз */
+  color: white;
+  font-size: 34px;
+}
+
+.services .highlight_1 {
+  position: relative;   /* позволяет двигать текст внутри баннера */
+  font-size: 18px;   /* увеличиваем размер */
+  bottom: 80px;            /* двигаем вниз */
+  color: #ffffff;    /* пример — золотистый */
+}
+
+.my-button_1 {
+  padding: 12px;           /* внутренние отступы: сверху/снизу и слева/справа */
+  width: 200px;
+  font-size: 18px;               /* размер текста */
+  font-weight: bold;
+  color: white;                  /* цвет текста */
+  border: none;                  /* убираем стандартную рамку */
+  border-radius: 10px;           /* закругление углов */
+  cursor: pointer;               /* курсор при наведении */
+  transition: 0.3s;              /* плавный эффект при наведении */
+  margin: -50px auto 0; /* сверху 20px, слева/справа авто для центрирования */
+  background: linear-gradient(45deg, #6bc9ff, #707070); /* диагональный градиент */
+}
+
+.my-button_1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.grid-container {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.item {
+  background-color: #181818;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: #1e1e1e; /* отдельный цвет фона */
+  color: rgb(255, 255, 255);
+  padding: 20px 30px; /* внутренние отступы */
+  text-align: center;  /* выравнивание текста */
+  height: 80px;
+}
+
+.footer-links {
+  margin-bottom: 10px; /* отступ между ссылками и копирайтом */
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px; /* расстояние между ссылками */
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
